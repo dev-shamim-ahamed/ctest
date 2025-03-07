@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Slider</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+<style>
+        /* Pagination dots position on top */
+        .swiper-pagination {
+            position: absolute;
+            top: 10px; /* Moves pagination to the top */
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+        }
+    </style>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+  <section class="swiper mySwiper">
+      <div class="swiper-pagination"></div>
+      
+    <div class="swiper-wrapper">
+
+      <div class="card swiper-slide">         
+        <div class="stars">★★★★★</div>
+        <img src="m.png" class="chat-icon" alt="User Image">
+        <div class="card__content">
+          <span class="card__title">Ken K. in Calgary</span>
+          <p class="card__text">
+            My association with Gordon is through my work as an apartment building operator. 
+            My needs are always met to a high standard. Gord’s Appliance is always prompt 
+            in their response, the people are clean in their appearance and deal with 
+            our tenants in a tidy manner...
+          </p>
+          <button class="card__btn">Read More</button>
+        </div>
+      </div>
+
+      <div class="card swiper-slide">         
+        <div class="stars">★★★★★</div>
+        <img src="m.png" class="chat-icon" alt="User Image">
+        <div class="card__content">
+          <span class="card__title">Ken K. in Calgary</span>
+          <p class="card__text">
+            My association with Gordon is through my work as an apartment building operator. 
+            My needs are always met to a high standard. Gord’s Appliance is always prompt 
+            in their response, the people are clean in their appearance and deal with 
+            our tenants in a tidy manner...
+          </p>
+          <button class="card__btn">Read More</button>
+        </div>
+      </div>
+
+      <div class="card swiper-slide">         
+        <div class="stars">★★★★★</div>
+        <img src="m.png" class="chat-icon" alt="User Image">
+        <div class="card__content">
+          <span class="card__title">Ken K. in Calgary</span>
+          <p class="card__text">
+            My association with Gordon is through my work as an apartment building operator. 
+            My needs are always met to a high standard. Gord’s Appliance is always prompt 
+            in their response, the people are clean in their appearance and deal with 
+            our tenants in a tidy manner...
+          </p>
+          <button class="card__btn">Read More</button>
+        </div>
+      </div>
+
+    </div>
+
+
+  </section>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      loop: true,
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 300,
+        modifier: 1,
+        slideShadows: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        dynamicBullets: true,
+      },
+      
+    });
+  </script>
+
+</body>
+</html>
